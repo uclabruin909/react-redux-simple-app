@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 
+import PlayerList from './player-list';
+
 export default class App extends Component {
   render() {
     return (
-      <div>React Redux Example</div>
+      <div>
+        <PlayerList />
+      </div>
     );
   }
 }
