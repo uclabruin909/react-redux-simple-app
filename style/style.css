@@ -1,0 +1,14 @@
+.list-group {
+  list-style: none;
+  border: 1px solid gray;
+  padding: 0;
+}
+
+.list-player-item {
+  border-bottom: 1px solid gray;
+  padding: 8px 5px 8px 12px;
+}
+
+.list-player-item:last-child {
+  border-bottom: 0px;
+}
