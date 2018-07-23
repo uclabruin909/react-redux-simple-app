@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class PlayerList extends Component {
   renderPlayers() {
     let playerListBlock = this.props.players.map((player) => {
-      return <li>{player.name}</li>
+      return <li key={player.name} className="list-player-item">{player.name}</li>
     });
 
     return playerListBlock;
