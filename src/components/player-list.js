@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+//redux action imports
+import { selectPlayer } from '../actions/index';
 
 class PlayerList extends Component {
   renderPlayers() {
@@ -26,6 +30,12 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(PlayerList);
+//Anything returned from this function will show up as props inside PlayerList
+function mapDispatchProps(dispatch) {
+  //whenever selectPlayer is called, the result should be passed to all reducers
+  return bindActionCreators({selectPlayer: selectPlayer}, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchProps)(PlayerList);
 
 
