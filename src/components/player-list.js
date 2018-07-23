@@ -2,13 +2,18 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class PlayerList extends Component {
+  renderPlayers() {
+    let playerListBlock = this.props.players.map((player) => {
+      return <li>{player.name}</li>
+    });
+
+    return playerListBlock;
+  }
+
   render() {
     return (
       <ul className="list-group col-sm-4">
-        <li>Test Link1</li>
-        <li>Test Link2</li>
-        <li>Test Link3</li>
-        <li>Test Link4</li>
+        {this.renderPlayers()}
       </ul>
     );
   }
