@@ -11,4 +11,11 @@ class PlayerDetail extends Component {
 	}
 }
 
-export default PlayerDetail;
+//What is returned will show up as props inside PlayerDetail class
+function mapStateToProps(state) {
+  return {
+    activePlayer: state.activePlayer
+  };
+}
+
+export default connect(mapStateToProps)(PlayerDetail);
