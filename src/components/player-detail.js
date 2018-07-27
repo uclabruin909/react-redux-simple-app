@@ -3,6 +3,16 @@ import { connect } from 'react-redux';
 
 class PlayerDetail extends Component {
 	render() {
+
+		let activePlayer = this.props.activePlayer;
+		if (!activePlayer) {
+			return (
+				<div>
+					<p>Select a Player from list:</p>
+				</div>
+			);
+		}
+
 		return (
 			<div>
 				<h3>Player Detail:</h3>
