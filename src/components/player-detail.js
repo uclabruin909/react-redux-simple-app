@@ -7,14 +7,14 @@ class PlayerDetail extends Component {
 		let activePlayer = this.props.activePlayer;
 		if (!activePlayer) {
 			return (
-				<div>
+				<div className="col-sm-8">
 					<p>Select a Player from list:</p>
 				</div>
 			);
 		}
 
 		return (
-			<div>
+			<div className="col-sm-8">
 				<h3>Player Detail:</h3>
 			</div>
 		);
