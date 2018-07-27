@@ -16,6 +16,8 @@ class PlayerDetail extends Component {
 		return (
 			<div className="col-sm-8">
 				<h3>Player Detail:</h3>
+				<p>Name: {activePlayer.name}</p>
+				<p>Team: {activePlayer.team}</p>
 			</div>
 		);
 	}

@@ -7,6 +7,7 @@
 .list-player-item {
   border-bottom: 1px solid gray;
   padding: 8px 5px 8px 12px;
+  cursor: pointer;
 }
 
 .list-player-item:last-child {
